@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 })
 
  const { addResource } = require('./utils/AddResourceUtil');
-app.post('/addResource', addResource);
+app.post('/add-Resource', addResource);
 
 server = app.listen(PORT, function () {
     const address = server.address();
