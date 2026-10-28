@@ -9,6 +9,10 @@ app.use(express.static("./public"));
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/" + startPage);
 })
+
+ const { addResource } = require('./utils/AddResourceUtil');
+app.post('/addResource', addResource);
+
 server = app.listen(PORT, function () {
     const address = server.address();
     const baseUrl = `http://${address.address == "::" ? 'localhost' : address.address}:${address.port}`;
