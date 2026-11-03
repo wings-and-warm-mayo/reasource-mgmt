@@ -13,6 +13,8 @@ app.get('/', (req, res) => {
 const { viewResources } = require('./utils/ViewResourceUtil')
 app.get('/view-resources', viewResources)
 
+ const { addResource } = require('./utils/AddResourceUtil');
+app.post('/add-Resource', addResource);
 
 server = app.listen(PORT, function () {
     const address = server.address();

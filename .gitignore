@@ -1,4 +1,5 @@
-# JSON data files
+
+#ignore db
 utils/resources.json
 
 # Logs
