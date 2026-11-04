@@ -9,11 +9,9 @@ var request = new XMLHttpRequest();
 request.open("DELETE", "/delete-resource/" + id, true);
 request.setRequestHeader("Content-Type", "application/json");
 request.onload = function () {
-var response = JSON.parse(request.responseText); // Parse JSON response from
-server
+var response = JSON.parse(request.responseText); // Parse JSON response from server
 if (request.status === 200) {
 alert(response.message); // If deletion was success, show a confirmation
-alert
 viewResources(); // Refresh the table to reflect the deleted
 resource
 } else {

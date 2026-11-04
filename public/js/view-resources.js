@@ -6,6 +6,7 @@ function viewResources() {
     request.setRequestHeader('Content-Type', 'application/json');
 
     request.onload = function () {
+        console.log("GET request completed");
         response = JSON.parse(request.responseText);
         
         var html = ''
