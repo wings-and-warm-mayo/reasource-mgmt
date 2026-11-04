@@ -10,6 +10,9 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/" + startPage);
 })
 
+const { viewResources } = require('./utils/ViewResourceUtil')
+app.get('/view-resources', viewResources)
+
  const { addResource } = require('./utils/AddResourceUtil');
 app.post('/add-Resource', addResource);
 
