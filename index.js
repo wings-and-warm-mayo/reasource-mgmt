@@ -13,6 +13,12 @@ app.get('/', (req, res) => {
  const { addResource } = require('./utils/AddResourceUtil');
 app.post('/add-Resource', addResource);
 
+const { editResource } = require('./utils/EditResourceUtil');
+app.put('/edit-resource/:id', editResource);
+
+const { deleteResource } = require('./utils/DeleteResourceUtil');
+app.delete('/delete-resource/:id', deleteResource);
+
 server = app.listen(PORT, function () {
     const address = server.address();
     const baseUrl = `http://${address.address == "::" ? 'localhost' : address.address}:${address.port}`;
